@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <bean class="org.apache.struts2.views.velocity.VelocityManager" name="default" optional="true"/>
+    <include file="struts-reportes.xml"></include>
+    <package name="libre" extends="jasperreports-default, struts-default" namespace="/">      	
+ 		<action name="ProcesarPrueba" class="controlador.PruebaStruts2">
+          <result name="exito" type="velocity">/prueba.vm</result>
+      	</action>  	 	
+      	
+      	
+ 	</package>
+       
+</struts>
+
+
